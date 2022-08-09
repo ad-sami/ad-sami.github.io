@@ -1,10 +1,13 @@
+$theme-color-yellow: #f0ff0b;
+$theme-color-black: #1e2125;
+$theme-color-white: #c4cfde;
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  background-color: #1e2125;
-  color: #c4cfde;
+  background-color: $theme-color-black;
+  color: $theme-color-white;
 }
 .container{
   display: block;
