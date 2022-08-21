@@ -7,11 +7,11 @@
   z-index: 2;
   .logo{
     .img{
-      float: left;
-      img{
-        width: 60px;
-        border-radius: 50%;
-        border: 2px solid;
+        float: left;
+        img{
+          width: 60px;
+          border-radius: 50%;
+          border: 2px solid;
       }
     }
     .logo-name{
@@ -54,7 +54,7 @@
       .welcome-text{
         font-size: 15px;
         font-weight: 300;
-        letter-spacing: 3px;
+        letter-spacing: 4px;
       }
       .head{
         color: #ffffff;
@@ -84,7 +84,8 @@
             font-size: 40px;
             float: left;
             padding: 10px 13px;
-            box-shadow:-5px -3px 14px -12px #fff, 5px 5px 7px -6px #000000;
+            box-shadow:10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+            background: linear-gradient(to right bottom, #212428, #16181c);
             margin-right: 20px;
             border-radius: 8px;
             transition: .5s;
@@ -119,7 +120,8 @@
         .img-bg-layer{
           display: block;
           position: absolute;
-          box-shadow: #fff 0 0 20px -16px;
+          box-shadow:10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+          background: linear-gradient(to right bottom, #212428, #16181c);
           width: 486px;
           height: calc(100% - 130px);
           top: 127px;
@@ -129,40 +131,35 @@
       }
     }
   }
-  .divider{
-    margin: auto;
-    display: block;
-    width: 1270px;
-    height: 1px;
-    border-radius: 10px;
-    background-color: #000000;
-  }
 }
 .features {
   width: 100%;
   display: block;
+
   .features-content {
     width: 100%;
     display: block;
     margin-top: 84px;
-    .headings{
-      .slogan{
-        color:$theme-color-yellow;
+
+    .headings {
+      .slogan {
+        color: $theme-color-yellow;
         letter-spacing: 1px;
         display: block;
         line-height: 14px;
         margin-bottom: 10px;
       }
-      .title{
+
+      .title {
         font-size: 60px;
         font-weight: 700;
         line-height: 1.2;
         margin-top: 15px;
         margin-bottom: 0;
       }
-      }
+    }
 
-    .boxes{
+    .boxes {
       width: 100%;
       display: grid;
       grid-template-columns:
@@ -171,29 +168,323 @@
       grid-column-gap: 50px;
       grid-row-gap: 50px;
       margin: 45px 0;
-      .each-box{
+
+      .each-box {
         width: 100%;
         display: block;
-        box-shadow:-5px -3px 14px -12px #fff, 5px 5px 7px -6px #000000;
-        padding: 70px 56px;
-        .icon{
-          font-size: 45px;
-          i{
-            color: $theme-color-yellow;
+        box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+        padding: 37px 56px 0 56px;
+        background-color: transparent;
+        position: relative;
+        transition: .5s;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: linear-gradient(to right bottom, #212428, #16181c);
+          opacity: 0;
+          z-index: 0;
+          transition: .5s;
+        }
+
+        &:hover {
+          &:before {
+            opacity: 1;
           }
         }
-        .box-title{
-          font-size: 27px;
-          font-weight: 500;
-          padding: 20px 0;
-          letter-spacing: 1px;
+
+        .content {
+          position: relative;
+          z-index: 1;
+          background: transparent;
+          transition: .5s;
+          .icon {
+            font-size: 45px;
+            background-color: transparent;
+            padding-top: 15px;
+
+            i {
+              color: $theme-color-yellow;
+              background-color: transparent;
+            }
+          }
+
+          .box-title {
+            font-size: 27px;
+            font-weight: 500;
+            padding: 20px 0;
+            letter-spacing: 1px;
+            background-color: transparent;
+
+          }
+
+          .paragraph {
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 25px;
+            background-color: transparent;
+
+          }
+          .bottom-icon {
+            font-size: 45px;
+            background-color: transparent;
+            padding-top: 15px;
+            opacity: 0;
+            transition: .5s;
+            i {
+              color: $theme-color-yellow;
+              background-color: transparent;
+            }
+          }
         }
-        .paragraph{
-          font-size: 18px;
-          letter-spacing: 1px;
-          line-height: 25px;
+        &:hover{
+          .content{
+            transition: .5s;
+            transform: translateY(-20px);
+            .bottom-icon{
+                opacity: 1;
+                transition: .5s;
+            }
+          }
         }
       }
     }
+  }
+}
+  .portfolio {
+    width: 100%;
+    display: block;
+
+    .portfolio-content {
+      width: 100%;
+      display: block;
+      margin-top: 84px;
+      background-color: transparent;
+
+      .heading {
+        text-align: center;
+
+        .slogan {
+          color: $theme-color-yellow;
+          letter-spacing: 1px;
+          display: block;
+          line-height: 14px;
+          padding-bottom: 20px;
+          background-color: transparent;
+        }
+
+        .title {
+          font-size: 80px;
+          font-weight: 600;
+          padding-bottom: 20px;
+          background: transparent;
+        }
+      }
+
+      .boxes {
+        width: 100%;
+        display: grid;
+        grid-template-columns:
+              1fr 1fr 1fr;
+        grid-column-gap: 50px;
+        grid-row-gap: 50px;
+        margin: 45px 0;
+
+        .each-box {
+          width: 100%;
+          display: block;
+          box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+          padding: 70px 56px;
+          background-color: transparent;
+          position: relative;;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right bottom, #212428, #16181c);
+            opacity: 0;
+            z-index: 0;
+            transition: .5s;
+          }
+
+          &:hover {
+            &:before {
+              opacity: 1;
+            }
+            .background-img{
+              transform:scale(1.1);
+              transition: .5s;
+            }
+          }
+
+          .content {
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+            .background-img {
+              width: 400px;
+              background-image: url("../../../assets/img/portfolio1.png");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              height: 265px;
+              transition: .5s;
+            }
+            .box-title{
+              background-color: rgba(0,0,0,0);
+              font-size: 18px;
+              font-weight: 500;
+              letter-spacing: 1px;
+              padding-top: 20px;
+              color: #f0ff0b;
+              text-align: left;
+            }
+            .paragraph{
+              background-color: transparent;
+              font-size: 25px;
+              line-height: 34x;
+              padding-top: 10px;
+              padding-right: 75px;
+            }
+          }
+        }
+      }
+
+
     }
   }
+
+  .resume {
+    width: 100%;
+    display: block;
+
+    .resume-content {
+      width: 100%;
+      display: block;
+      margin-top: 84px;
+
+      .heading {
+        .slogan {
+          color: $theme-color-yellow;
+          letter-spacing: 1px;
+          display: block;
+          line-height: 14px;
+          margin-bottom: 10px;
+          margin-left: 580px;
+        }
+      }
+
+      .title {
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-top: 15px;
+        margin-bottom: 0;
+        margin-left: 455px;
+
+      }
+
+      .boxes {
+        width: 100%;
+        display: grid;
+        grid-template-columns:
+              1fr 1fr 1fr 1fr;
+        margin: 45px 0;
+        box-shadow: -5px -3px 14px -12px #fff, 5px 5px 7px -6px #000000;
+        font-size: 26px;
+        font-family: "Lato", sans-serif;
+
+        .each-box {
+          width: 100%;
+          display: block;
+          padding: 30px 10px;
+          background-color: transparent;
+
+          .box-title {
+            background-color: transparent;
+            text-align: center;
+          }
+
+          &:hover {
+            transition: .5s;
+            box-shadow:10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+            background: linear-gradient(to right bottom, #212428, #16181c);
+          }
+        }
+
+        .box-selection {
+          background: linear-gradient(to right bottom, #212428, #16181c);
+        }
+      }
+      .resume-box{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .left-box{
+          width:100%;
+          display: block;
+          .heading2{
+            width: 100%;
+            display: block;
+            .slogan2{
+              letter-spacing: 2px;
+              color: $theme-color-yellow;
+
+            }
+          .title2{
+            font-size: 50px;
+            font-weight: 600;
+            padding: 20px 0 30px 0;
+            text-align: left;
+          }
+          }
+          .boxes2{
+            width: 100%;
+            .each-box2{
+              width: 100%;
+              display: block;
+              box-shadow:10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+              background: linear-gradient(to right bottom, #212428, #16181c);
+              border-radius: 15px;
+              .box-content{
+                padding: 34px 54px;
+                border-radius: 15px;
+                .box-title{
+                  background-color: transparent;
+                  font-size: 30px;
+                  font-weight: 400;
+                  padding: 10px 0px;
+
+                }
+                .passed-year{
+                  background-color: transparent;
+                  color: #606060;
+                }
+                .box-divider{
+                  width: 100%;
+                  display: block;
+                  height: 1px;
+                  background-color: #000;
+                  margin: 30px 0;
+                }
+                .paragraph{
+                  background-color: transparent;
+                  font-size: 18px;
+                  line-height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+

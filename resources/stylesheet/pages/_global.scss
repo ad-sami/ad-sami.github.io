@@ -14,3 +14,13 @@ $theme-color-white: #c4cfde;
   max-width: 1365px;
   margin: auto;
 }
+.divider {
+  margin: auto;
+  display: block;
+  width: 1270px;
+  height: 1px;
+  border-radius: 10px;
+  background-color: #000000;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
