@@ -23,7 +23,7 @@
   }
   .navigation{
     .nav-item{
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 300;
       list-style: none;
       float: left;
@@ -349,15 +349,13 @@
             .paragraph{
               background-color: transparent;
               font-size: 25px;
-              line-height: 34x;
+              line-height: 34px;
               padding-top: 10px;
               padding-right: 75px;
             }
           }
         }
       }
-
-
     }
   }
 
@@ -423,42 +421,72 @@
           background: linear-gradient(to right bottom, #212428, #16181c);
         }
       }
-      .resume-box{
+      .resume-box {
         width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        .left-box{
-          width:100%;
-          display: block;
-          .heading2{
-            width: 100%;
-            display: block;
-            .slogan2{
-              letter-spacing: 2px;
-              color: $theme-color-yellow;
+        display: block;
 
-            }
-          .title2{
+        .heading2 {
+          width: 100%;
+          display: block;
+
+          .slogan2 {
+            letter-spacing: 2px;
+            color: $theme-color-yellow;
+
+          }
+
+          .title2 {
             font-size: 50px;
             font-weight: 600;
             padding: 20px 0 30px 0;
             text-align: left;
           }
-          }
+        }
+      }
           .boxes2{
             width: 100%;
-            .each-box2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 100px;
+            .each-box2 {
               width: 100%;
               display: block;
-              box-shadow:10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+              box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+              background-color: transparent;
+              position: relative;
               background: linear-gradient(to right bottom, #212428, #16181c);
-              border-radius: 15px;
+              &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(to right bottom, #212428, #16181c);
+                opacity: 0;
+                z-index: 0;
+                transition: .5s;
+              }
+              &:hover {
+                .circle{
+                  background-color: $theme-color-yellow;
+                }
+                .circle2{
+                  background-color: $theme-color-yellow;
+                }
+                &:before {
+                  opacity: 1;
+                }
+              }
               .box-content{
-                padding: 34px 54px;
+                position: relative;
+                padding: 25px 25px;
                 border-radius: 15px;
+                z-index: 1;
+                background-color: transparent;
                 .box-title{
                   background-color: transparent;
-                  font-size: 30px;
+                  font-size: 26px;
                   font-weight: 400;
                   padding: 10px 0px;
 
@@ -466,6 +494,7 @@
                 .passed-year{
                   background-color: transparent;
                   color: #606060;
+                  font-size: 15px;
                 }
                 .box-divider{
                   width: 100%;
@@ -476,13 +505,177 @@
                 }
                 .paragraph{
                   background-color: transparent;
-                  font-size: 18px;
+                  font-size: 16px;
                   line-height: 25px;
                 }
               }
+              .straight-line{
+                position: absolute;
+                display: block;
+                width: 4px;
+                height:280px;
+                background-color: $theme-text-black;
+                top: 0;
+                left: -34px;
+                border-radius: 25px;
+                z-index: 0;
+              }
+              .circle{
+                position: absolute;
+                display: block;
+                width: 20px;
+                height: 20px;
+                border: 4px solid $theme-text-black;
+                top: 40px;
+                left: -42px;
+                z-index: 1;
+                border-radius: 50%;
+                background-color: $theme-color-black;
+                transition: all 0.5s ease;
+              }
+              .third-line {
+                position: absolute;
+                display: block;
+                width: 26px;
+                height: 5px;
+                z-index: 1;
+                top: 47px;
+                left: -26px;
+                background-color: $theme-text-black;
+              }
+              .straight-line2{
+                position: absolute;
+                display: block;
+                width: 4px;
+                height:280px;
+                background-color: $theme-text-black;
+                top: 0;
+                right:662px;
+                border-radius: 25px;
+                z-index: 0;
+              }
+              .circle2{
+                position: absolute;
+                display: block;
+                width: 20px;
+                height: 20px;
+                border: 4px solid $theme-text-black;
+                top: 40px;
+                right:654px;
+                z-index: 1;
+                border-radius: 50%;
+                background-color: $theme-color-black;
+                transition: all 0.5s ease;
+              }
+              .third-line2 {
+                position: absolute;
+                display: block;
+                width: 26px;
+                height: 5px;
+                z-index: 1;
+                top: 47px;
+                right:632px;
+                background-color: $theme-text-black;
+              }
+            }
+            .left-margin{
+              margin-left: 35px;
             }
           }
+      }
+    }
+  .contact{
+    width: 100%;
+    display: block;
+    .contact-content{
+      width: 100%;
+      display: block;
+      .heading{
+        .slogan{
+          color: $theme-color-yellow;
+          letter-spacing: 2px;
+          display: block;
+          line-height: 14px;
+          text-align: center;
+          margin-bottom: 10px;
         }
+        .title{
+          text-align: center;
+          font-size: 70px;
+          font-weight: 600;
+        }
+      }
+      .hero{
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .form{
+        width: 70%;
+        padding: 60px 0;
+      }
+      .input-group{
+        margin-bottom: 30px;
+        position: relative;
+      }
+      input, textarea{
+        width: 100%;
+        padding: 10px;
+        outline: 0;
+        border:1px solid #fff;
+        color: #fff;
+        background: transparent;
+        font-size: 15px;
+        resize: none;
+      }
+      label{
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        color: #fff;
+        cursor: text;
+        transition: 0.2s;
+        background: transparent;
+      }
+      button{
+        padding: 10px 0;
+        color:#fff;
+        outline: none;
+        background: transparent;
+        border: 1px solid #fff;
+        width: 100%;
+        cursor: pointer;
+        transition: all .5s ease;
+        &:hover{
+          color:$theme-text-black;
+          background-color: #c4cfde;
+          box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+          i{
+            color: $theme-color-black;
+            transition: all .5s ease;
+          }
+        }
+      }
+      input:focus~label,
+      input:valid~label,
+      textarea:focus~label,
+      textarea:valid~label
+      {
+        top: -35px;
+        font-size: 14px;
+      }
+      .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .row .input-group{
+        flex-basis: 48%;
       }
     }
   }

@@ -1,6 +1,7 @@
 $theme-color-yellow: #f0ff0b;
 $theme-color-black: #1e2125;
 $theme-color-white: #c4cfde;
+$theme-text-black: #17191c;
 *{
   padding: 0;
   margin: 0;
@@ -20,7 +21,10 @@ $theme-color-white: #c4cfde;
   width: 1270px;
   height: 1px;
   border-radius: 10px;
-  background-color: #000000;
+  background-color: $theme-text-black;
   margin-top: 100px;
   margin-bottom: 100px;
+}
+i{
+  background-color: transparent;
 }
