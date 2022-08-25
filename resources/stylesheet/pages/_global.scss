@@ -10,6 +10,10 @@ $theme-text-black: #17191c;
   background-color: $theme-color-black;
   color: $theme-color-white;
 }
+body {
+  overflow: hidden auto;
+}
+
 .container{
   display: block;
   max-width: 1365px;
